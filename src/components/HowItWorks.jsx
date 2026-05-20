@@ -25,7 +25,7 @@ const EXAMPLES = [
 
 export default function HowItWorks() {
   return (
-    <section id="cli" className="py-24 px-6">
+    <section id="cli" className="py-24 px-6 overflow-x-hidden">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
@@ -72,8 +72,8 @@ export default function HowItWorks() {
               ["--block-sep <str>", "Block separator (default: -)"],
               ["--no-require-each", "Don't force one char per category"],
             ].map(([flag, desc]) => (
-              <div key={flag} className="flex gap-3 py-1 border-b border-white/4 last:border-0">
-                <span className="text-orange-400/80 shrink-0 w-40">{flag}</span>
+              <div key={flag} className="flex flex-col sm:flex-row sm:gap-3 py-1.5 border-b border-white/4 last:border-0">
+                <span className="text-orange-400/80 sm:shrink-0 sm:w-40">{flag}</span>
                 <span className="text-white/30">{desc}</span>
               </div>
             ))}
