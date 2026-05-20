@@ -10,7 +10,7 @@ export const UNSAFE_ENV = "$#!`\\\"'{}()[]|;&<>~";
 
 export const DEFAULT_SAFE_CONFIG = {
   length: 44,
-  count: 1,
+  count: 2,
   categories: ["upper", "lower", "digits", "symbols"],
   symbolSet: null,
   excludeAmbiguous: true,
@@ -22,7 +22,7 @@ export const DEFAULT_SAFE_CONFIG = {
 
 export const DEFAULT_RAW_CONFIG = {
   length: 32,
-  count: 1,
+  count: 2,
   categories: ["upper", "lower", "digits", "symbols"],
   symbolSet: null,
   excludeAmbiguous: false,
