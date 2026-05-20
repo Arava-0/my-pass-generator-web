@@ -204,7 +204,7 @@ export default function Generator() {
               {/* Categories */}
               <div>
                 <label className="text-sm text-white/60 block mb-3">Character sets</label>
-                <div className="grid grid-cols-4 gap-2">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   {CATEGORIES.map(({ id, label, char }) => (
                     <CategoryButton
                       key={id}
