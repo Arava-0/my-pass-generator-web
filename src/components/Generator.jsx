@@ -26,16 +26,16 @@ function CopyButton({ text, className = "" }) {
 
 function Toggle({ checked, onChange, label }) {
   return (
-    <label className="flex items-center gap-2 cursor-pointer group select-none">
+    <label className="flex items-start gap-2 cursor-pointer group select-none">
       <div
-        className={`relative w-9 h-5 rounded-full transition-colors ${checked ? 'bg-orange-500' : 'bg-white/10'}`}
+        className={`relative shrink-0 w-9 h-5 rounded-full transition-colors mt-0.5 ${checked ? 'bg-orange-500' : 'bg-white/10'}`}
         onClick={() => onChange(!checked)}
       >
         <div
           className={`absolute top-0.5 left-0.5 w-4 h-4 rounded-full bg-white transition-transform ${checked ? 'translate-x-4' : ''}`}
         />
       </div>
-      <span className="text-sm text-white/60 group-hover:text-white/80 transition-colors">{label}</span>
+      <span className="text-sm text-white/60 group-hover:text-white/80 transition-colors min-w-0 leading-snug">{label}</span>
     </label>
   );
 }
@@ -130,7 +130,7 @@ export default function Generator() {
   };
 
   return (
-    <section id="generator" className="py-24 px-6">
+    <section id="generator" className="py-24 px-6 overflow-x-hidden">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
@@ -236,7 +236,7 @@ export default function Generator() {
                 label="Split into blocks"
               />
               {useBlocks && (
-                <div className="pl-4 border-l border-orange-500/15 space-y-3">
+                <div className="sm:pl-4 sm:border-l border-orange-500/15 space-y-3">
                   <div>
                     <div className="flex justify-between items-center mb-1.5">
                       <label className="text-xs text-white/40">Block size</label>
@@ -273,7 +273,7 @@ export default function Generator() {
             </button>
 
             {showAdvanced && (
-              <div className="mt-4 grid md:grid-cols-2 gap-4 pl-4 border-l border-orange-500/15">
+              <div className="mt-4 grid md:grid-cols-2 gap-4 sm:pl-4 sm:border-l border-orange-500/15">
                 <div>
                   <label className="text-xs text-white/40 block mb-1.5">Exclude characters</label>
                   <input
